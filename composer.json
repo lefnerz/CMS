@@ -1,0 +1,6 @@
+{
+    "name": "lefnerz/cms",
+    "autoload": {
+        "classmap": ["src"]
+    }
+}
