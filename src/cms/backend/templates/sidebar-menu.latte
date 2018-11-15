@@ -1,0 +1,81 @@
+{block sidebar-menu}
+
+{dump $presenter}
+
+<!-- Sidebar Menu -->
+<nav class="mt-2">
+    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+        <li class="nav-item">
+            <a n:href="Dashboard:default" n:class="$presenter->isLinkCurrent('Dashboard:') ? active, 'nav-link'">
+                <i class="nav-icon fa fa-dashboard"></i>
+                <p>{_'dashboard'}</p>
+            </a>
+        </li>
+        <li n:class="$presenter->isLinkCurrent('Product:*') || $presenter->isLinkCurrent('Parameter:*') || $presenter->isLinkCurrent('Category:*') ? menu-open, 'nav-item has-treeview'">
+            <a n:href="Product:default" n:class="$presenter->isLinkCurrent('Product:*') || $presenter->isLinkCurrent('Parameter:*') || $presenter->isLinkCurrent('Category:*') ? active, 'nav-link'">
+                <i class="nav-icon fa fa-product-hunt"></i>
+                <p>{_'module.product.title'} <i class="right fa fa-angle-left"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a n:href="Product:default" n:class="$presenter->isLinkCurrent('Product:*') ? active, 'nav-link'">
+                        <i class="fa fa-circle-o nav-icon"></i>
+                        <p>{_'module.product.title'}</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a n:href="Parameter:default" n:class="$presenter->isLinkCurrent('Parameter:*') ? active, 'nav-link'">
+                        <i class="fa fa-circle-o nav-icon"></i>
+                        <p>{_'module.parameter.title'}</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a n:href="Category:default" n:class="$presenter->isLinkCurrent('Category:*') ? active, 'nav-link'">
+                        <i class="fa fa-circle-o nav-icon"></i>
+                        <p>{_'module.category.title'}</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li n:class="$presenter->isLinkCurrent('Settings:*') || $presenter->isLinkCurrent('Language:*') || $presenter->isLinkCurrent('Translator:*') ? menu-open, 'nav-item has-treeview'">
+            <a n:href="Settings:default" n:class="$presenter->isLinkCurrent('Settings:*') || $presenter->isLinkCurrent('Language:*') || $presenter->isLinkCurrent('Translator:*') ? active, 'nav-link'">
+                <i class="nav-icon fa fa-wrench"></i>
+                <p>{_'module.settings.title'} <i class="right fa fa-angle-left"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a n:href="Settings:default" n:class="$presenter->isLinkCurrent('Settings:*') ? active, 'nav-link'">
+                        <i class="fa fa-circle-o nav-icon"></i>
+                        <p>{_'module.settings.title'}</p>
+                    </a>
+                </li>
+                <li class="nav-item" style="display: none;">
+                    <a n:href="Language:default" n:class="$presenter->isLinkCurrent('Language:*') ? active, 'nav-link'">
+                        <i class="fa fa-circle-o nav-icon"></i>
+                        <p>{_'module.language.title'}</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a n:href="Translator:default" n:class="$presenter->isLinkCurrent('Translator:*') ? active, 'nav-link'">
+                        <i class="fa fa-circle-o nav-icon"></i>
+                        <p>{_'module.translator.title'}</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-header text-uppercase">{_'control.languages.title'}</li>
+        {foreach $languages as $lng}
+        <li class="nav-item" n:if="$lng->code !== $lang">
+            <a n:href="this lang => $lng->code" class="nav-link">
+                <i class="nav-icon fa fa-flag"></i>
+                <p>{$lng->name}</p>
+            </a>
+        </li>
+        {/foreach}
+
+    </ul>
+</nav>
+<!-- /.sidebar-menu -->

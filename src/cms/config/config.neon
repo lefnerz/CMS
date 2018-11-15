@@ -1,16 +1,9 @@
 parameters:
 
 
-application:
-	errorPresenter: Error
-	mapping:
-		*: App\*Module\Presenters\*Presenter
-
-
-session:
-	expiration: 14 days
-
+latte:
+    macros:
+        - \CMS\Helpers\Macros::install
 
 services:
-	router: App\RouterFactory::createRouter
 	- CMS\Helpers\WebDir ( %projectRoot% )

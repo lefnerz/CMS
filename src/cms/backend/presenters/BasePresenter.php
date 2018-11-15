@@ -13,12 +13,28 @@ use Nette\Application\UI\Presenter;
 
 class BasePresenter extends Presenter
 {
+    /** @persistent */
+    public $lang;
+
     /** @var \CMS\Helpers\WebDir */
     private $_webDir;
 
     public function injectWebDir(\CMS\Helpers\WebDir $webDir)
     {
         $this->_webDir = $webDir;
+    }
+
+    public function beforeRender()
+    {
+        parent::beforeRender();
+
+        $this->template->setTranslator($this->_translator);
+        $this->template->languages = $this->_language->getAll();
+        $this->template->lang = $this->lang;
+
+        if (!$this->isAllowed()) {
+            $this->redirect('Sign:in');
+        }
     }
 
     public function formatTemplateFiles()

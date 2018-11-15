@@ -1,0 +1,14 @@
+{
+  "translator": {
+    "id": {
+      "type": "serial",
+      "primary": true
+    },
+    "code": {
+      "type": "string",
+      "length": 64,
+      "null": false,
+      "title": "String Code"
+    }
+  }
+}
