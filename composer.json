@@ -1,6 +1,8 @@
 {
     "name": "lefnerz/cms",
     "autoload": {
-        "classmap": ["src"]
+        "psr-4": {
+            "CMS\\": "src/cms/"
+        }
     }
 }
