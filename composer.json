@@ -2,7 +2,8 @@
     "name": "lefnerz/cms",
     "autoload": {
         "psr-4": {
-            "CMS\\": "src/cms/"
+            "CMS\\": "src/cms/",
+            "App\\Presenters\\": "src/cms/Presenters-app/"
         }
     }
 }
