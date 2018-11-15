@@ -1,5 +1,5 @@
 parameters:
-    projectRoot: /var/www/kesacel.hu
+
 
 application:
 	errorPresenter: Error
