@@ -1,22 +1,27 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+//error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+
+$dir = __DIR__ . '/../../../';
+
+require $dir . 'autoload.php';
 
 $configurator = new Nette\Configurator;
 
 //$configurator->setDebugMode('23.75.345.200'); // enable for your remote IP
-$configurator->enableTracy(__DIR__ . '/../log');
+$configurator->enableTracy($dir . '../log');
 
 $configurator->setTimeZone('Europe/Prague');
-$configurator->setTempDirectory(__DIR__ . '/../temp');
+$configurator->setTempDirectory($dir . '../temp');
 
 $configurator->createRobotLoader()
-    ->addDirectory(__DIR__)
-    ->addDirectory(__DIR__ . '/../vendor/lefnerz/cms/src/cms/Presenters-app')
+	->addDirectory($dir . '/../app')
+	->addDirectory(__DIR__)
 	->register();
 
-$configurator->addConfig(__DIR__ . '/config/config.neon');
-$configurator->addConfig(__DIR__ . '/config/config.local.neon');
+$configurator->addConfig(__DIR__ . '/cms/config/config.neon');
+$configurator->addConfig($dir . '../app/config/config.local.neon');
 
 $container = $configurator->createContainer();
 

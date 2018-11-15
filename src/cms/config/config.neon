@@ -1,0 +1,16 @@
+parameters:
+    projectRoot: /var/www/kesacel.hu
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+
+session:
+	expiration: 14 days
+
+
+services:
+	router: App\RouterFactory::createRouter
+	- CMS\Helpers\WebDir ( %projectRoot% )
