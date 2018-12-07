@@ -1,0 +1,27 @@
+{
+  "language": {
+    "id": {
+      "type": "serial",
+      "primary": true
+    },
+    "code": {
+      "type": "string",
+      "length": 6,
+      "is_nullable": false,
+      "title": "language.code"
+    },
+    "name": {
+      "type": "string",
+      "length": 64,
+      "title": "language.name"
+    },
+    "state": {
+      "type": "boolean",
+      "title": "language.state"
+    },
+    "!values": [
+      { "code": "cs", "name": "Čeština", "state": true },
+      { "code": "en", "name": "English", "state": false }
+    ]
+  }
+}

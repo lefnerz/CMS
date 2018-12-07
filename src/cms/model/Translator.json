@@ -1,0 +1,22 @@
+{
+  "translator": {
+    "language_id": {
+      "type": "integer",
+      "reference": true,
+      "primary": true,
+      "is_nullable": false
+    },
+    "term": {
+      "type": "string",
+      "length": 64,
+      "is_nullable": false,
+      "title": "translator.term",
+      "primary": true
+    },
+    "translate": {
+      "type": "string",
+      "length": 256,
+      "title": "translator.translate"
+    }
+  }
+}

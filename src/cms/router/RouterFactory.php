@@ -22,11 +22,12 @@ final class RouterFactory
             'module' => 'Backend',
             'action' => 'img',
         ]);
-        $router[] = new Route('admin/[<lang [a-z]{2}>/]<presenter>/<action>[/<id>]', [
+        $router[] = new Route('admin/[<lang [a-z]{2}>/]<presenter>/<action>[/<id>][/<id2>]', [
             'lang' => 'cs',
             'module' => 'Backend',
             'presenter' => 'Dashboard',
-            'action' => 'default'
+            'action' => 'default',
+            'id2' => 'general'
         ]);
         $router[] = new Route('[<lang [a-z]{2}>/]<presenter>/<action>[/<id>]', [
             'lang' => 'cs',

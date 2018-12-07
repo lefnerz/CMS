@@ -13,8 +13,9 @@
                 <p>{_'dashboard'}</p>
             </a>
         </li>
-        <li n:class="$presenter->isLinkCurrent('Product:*') || $presenter->isLinkCurrent('Parameter:*') || $presenter->isLinkCurrent('Category:*') ? menu-open, 'nav-item has-treeview'">
-            <a n:href="Product:default" n:class="$presenter->isLinkCurrent('Product:*') || $presenter->isLinkCurrent('Parameter:*') || $presenter->isLinkCurrent('Category:*') ? active, 'nav-link'">
+
+        <li n:class="$presenter->isLinkCurrent('Product:*') || $presenter->isLinkCurrent('Category:*') ? menu-open, 'nav-item has-treeview'"> <!--  || $presenter->isLinkCurrent('Category:*') -->
+            <a n:href="Product:default" n:class="$presenter->isLinkCurrent('Product:*') || $presenter->isLinkCurrent('Category:*') ? active, 'nav-link'"> <!-- || $presenter->isLinkCurrent('Parameter:*') || $presenter->isLinkCurrent('Category:*') -->
                 <i class="nav-icon fa fa-product-hunt"></i>
                 <p>{_'module.product.title'} <i class="right fa fa-angle-left"></i> </p>
             </a>
@@ -25,12 +26,13 @@
                         <p>{_'module.product.title'}</p>
                     </a>
                 </li>
-                <li class="nav-item">
+                {* <li class="nav-item">
                     <a n:href="Parameter:default" n:class="$presenter->isLinkCurrent('Parameter:*') ? active, 'nav-link'">
                         <i class="fa fa-circle-o nav-icon"></i>
                         <p>{_'module.parameter.title'}</p>
                     </a>
                 </li>
+                *}
                 <li class="nav-item">
                     <a n:href="Category:default" n:class="$presenter->isLinkCurrent('Category:*') ? active, 'nav-link'">
                         <i class="fa fa-circle-o nav-icon"></i>
@@ -39,6 +41,7 @@
                 </li>
             </ul>
         </li>
+
         <li n:class="$presenter->isLinkCurrent('Settings:*') || $presenter->isLinkCurrent('Language:*') || $presenter->isLinkCurrent('Translator:*') ? menu-open, 'nav-item has-treeview'">
             <a n:href="Settings:default" n:class="$presenter->isLinkCurrent('Settings:*') || $presenter->isLinkCurrent('Language:*') || $presenter->isLinkCurrent('Translator:*') ? active, 'nav-link'">
                 <i class="nav-icon fa fa-wrench"></i>
@@ -75,7 +78,6 @@
             </a>
         </li>
         {/foreach}
-
     </ul>
 </nav>
 <!-- /.sidebar-menu -->

@@ -22,7 +22,10 @@ $configurator->createRobotLoader()
 
 $configurator->addConfig(__DIR__ . '/cms/config/config.neon');
 $configurator->addConfig($dir . '../app/config/config.neon');
-$configurator->addConfig($dir . '../app/config/config.local.neon');
+
+$localConfig = $dir . '../app/config/config.local.neon';
+if (is_file($localConfig))
+$configurator->addConfig($localConfig);
 
 $container = $configurator->createContainer();
 

@@ -1,0 +1,39 @@
+{
+  "category": {
+    "id": {
+      "type": "serial"
+    },
+    "category_id": {
+      "reference": true,
+      "is_nullable": true,
+      "type": "integer",
+      "title": "category.parent",
+      "group": "general",
+      "list": true,
+      "listValue": "formatCategoryParentListValue"
+    }
+  },
+  "category_language": {
+    "category_id": {
+      "reference": true,
+      "primary": true,
+      "is_nullable": false,
+      "type": "integer",
+      "title": "category.parent"
+    },
+    "language_id": {
+      "type": "integer",
+      "reference": true,
+      "title": "language.id",
+      "primary": true,
+      "is_nullable": false
+    },
+    "title": {
+      "type": "string",
+      "length": 128,
+      "title": "category.title",
+      "list": true,
+      "group": "general"
+    }
+  }
+}

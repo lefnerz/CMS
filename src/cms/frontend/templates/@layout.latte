@@ -1,31 +1,153 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>{ifset title}{include title|stripHtml} | {/ifset} Lefner CMS</title>
+    <!-- Material Design for Bootstrap fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
 
-    {css /html/bootstrap-4.1.3/css/bootstrap.min.css /html/css/stylesheet.css /html/css/homepage.css}
+    <!-- Material Design for Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
-    {script /html/js/jquery-3.3.1.min.js /html/js/popper.min.js /html/bootstrap-4.1.3/js/bootstrap.min.js}
+    {css /html/css/stylesheet.css /html/css/homepage.css}
 
+    <title>CMS</title>
 </head>
 
 <body>
 
-<nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+<nav class="navbar navbar-dark bg-dark navbar-expand-sm cms-topmenu">
     <div class="container">
-        <a class="navbar-brand" href="#">CMS eShop platform</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-user"></i> Sign In</a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-shopping-basket"></i> Basket</a></li>
+
+        <button class="navbar-toggler"><span class="navbar-toggler-icon" type="button" data-toggle="collapse" data-target="#topBar"></span></button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="topBar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="tel:00420778762741">+420 778 762 741</a>
+                </li>
+                <li class="navbar-text">|</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mailto:obchod@cm-system.cz">obchod@cm-system.cz</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">OBLIBENE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">PRIHLASIT SE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CZ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kč</a>
+                </li>
             </ul>
         </div>
+
     </div>
 </nav>
 
+<section class="cms-top2menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="logo">
+                    <a class="brand" href="#">
+                        <img src="/img/kesacel-logo.png" class="d-inline-block align-top" alt="Kesacel">
+                    </a>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="bmd-form-group bmd-collapse-inline pull-xs-right">
+                    <button class="btn bmd-btn-icon" for="search" data-toggle="collapse" data-target="#collapse-search" aria-expanded="false" aria-controls="collapse-search">
+                        <i class="material-icons">search</i>
+                    </button>
+                    <span id="collapse-search" class="collapse">
+                        <input class="form-control" type="text" id="search" placeholder="Enter your query...">
+                      </span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="bmd-form-group text-right">
+                    <a href="#" class="btn btn-dark btn-lg active">Košík</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<nav class="cms-menu">
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Another link</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section id="banner" class="clearfix">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="https://via.placeholder.com/1280x300.png/08f/fff" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://via.placeholder.com/1280x300.png/0bf/fff" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="https://via.placeholder.com/1280x300.png/05f/fff" alt="Third slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+</section>
+
+<section id="products">
+    <div class="container">
+        <div class="row">
+            <div class="col-3" n:for="$i = 0; $i < 8; $i++">
+                <div class="card">
+                    <img class="card-img-top" src="https://via.placeholder.com/255x160.png/0{$i}f/fff" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                    <div class="card-footer text-right">
+                        <a href="#" class="btn btn-secondary active btn-small">cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!--
 <section id="BANNER">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -85,35 +207,26 @@
         </button>
     </div>
 </nav>
-
+-->
 <section id="CONTENT">
     <div class="container">
         {block content}{/block}
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec vehicula metus, non pretium tortor. Nullam condimentum mollis molestie. Nulla quam mauris, semper at lobortis vitae, tincidunt a nisi. Nam a diam luctus, sollicitudin leo quis, tempus enim. Donec lobortis nibh quis erat volutpat, id ornare nisi sagittis. Proin accumsan nibh in nunc accumsan, at fringilla nisi vehicula. Duis lorem ex, maximus sed rhoncus ut, egestas quis tortor. Donec efficitur urna rutrum nisi tincidunt, quis consequat erat congue. Etiam elementum fermentum augue. Nunc eu commodo massa. Curabitur id consequat ipsum, vitae ornare eros. Nulla ac metus arcu. Integer dignissim eros vitae risus facilisis, id sollicitudin eros gravida. Morbi aliquet tortor sed est malesuada semper eu quis ante. Proin elit sem, malesuada nec pretium sollicitudin, hendrerit ac dolor.</p>
-        <p>Suspendisse sit amet dictum ante, non commodo lacus. In tincidunt accumsan venenatis. Nulla facilisi. Fusce convallis nisi libero, et lobortis est tincidunt quis. Nulla faucibus justo nisl, at pellentesque tortor porttitor ac. Vestibulum pulvinar luctus tincidunt. Maecenas luctus tortor sed quam commodo, ut blandit nulla porttitor.</p>
-        <p>Vivamus eget egestas massa. Cras sodales commodo velit, a eleifend odio rhoncus non. Suspendisse in est molestie, hendrerit lacus in, venenatis quam. Donec maximus eros eu mi elementum tempor. Pellentesque consectetur imperdiet dui, quis blandit arcu vestibulum pretium. In sit amet commodo nunc. Aenean porttitor eu mauris ut ornare. Cras volutpat, arcu sed convallis cursus, urna eros facilisis odio, vitae molestie eros elit ac risus.</p>
-        <p>Suspendisse volutpat sapien at velit ullamcorper dictum. Integer accumsan nulla dolor, vel suscipit sem tincidunt eu. Nulla molestie metus sem, et viverra ipsum consequat eget. Vestibulum pretium eget felis cursus pellentesque. Phasellus ac magna molestie, placerat dolor at, suscipit magna. Nam imperdiet ex est, eu iaculis nisi ornare ac. Sed iaculis imperdiet ipsum eget eleifend. Cras vel felis nec elit pharetra iaculis. Quisque tempor felis vel odio consectetur, ac vulputate diam ornare. Donec pulvinar ac justo eu faucibus. Mauris a lacus at turpis lacinia fringilla at eu quam. Proin ac risus turpis. Nullam fringilla maximus bibendum. Nunc at nunc purus.</p>
-        <p>Nullam velit sem, aliquet in elit varius, blandit porttitor purus. Fusce elementum et nisi venenatis pellentesque. Integer maximus eros sodales egestas porttitor. Morbi scelerisque dolor et mi fringilla, non tempus justo commodo. Phasellus suscipit velit nec quam luctus, finibus imperdiet diam posuere. Fusce faucibus ornare erat sed auctor. Aliquam eu metus semper, suscipit nisl ac, efficitur dolor. Integer ornare neque sed justo accumsan pellentesque. Mauris a ante dictum, venenatis odio a, porttitor sapien. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean volutpat lorem at nisl molestie convallis.</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec vehicula metus, non pretium tortor. Nullam condimentum mollis molestie. Nulla quam mauris, semper at lobortis vitae, tincidunt a nisi. Nam a diam luctus, sollicitudin leo quis, tempus enim. Donec lobortis nibh quis erat volutpat, id ornare nisi sagittis. Proin accumsan nibh in nunc accumsan, at fringilla nisi vehicula. Duis lorem ex, maximus sed rhoncus ut, egestas quis tortor. Donec efficitur urna rutrum nisi tincidunt, quis consequat erat congue. Etiam elementum fermentum augue. Nunc eu commodo massa. Curabitur id consequat ipsum, vitae ornare eros. Nulla ac metus arcu. Integer dignissim eros vitae risus facilisis, id sollicitudin eros gravida. Morbi aliquet tortor sed est malesuada semper eu quis ante. Proin elit sem, malesuada nec pretium sollicitudin, hendrerit ac dolor.</p>
-        <p>Suspendisse sit amet dictum ante, non commodo lacus. In tincidunt accumsan venenatis. Nulla facilisi. Fusce convallis nisi libero, et lobortis est tincidunt quis. Nulla faucibus justo nisl, at pellentesque tortor porttitor ac. Vestibulum pulvinar luctus tincidunt. Maecenas luctus tortor sed quam commodo, ut blandit nulla porttitor.</p>
-        <p>Vivamus eget egestas massa. Cras sodales commodo velit, a eleifend odio rhoncus non. Suspendisse in est molestie, hendrerit lacus in, venenatis quam. Donec maximus eros eu mi elementum tempor. Pellentesque consectetur imperdiet dui, quis blandit arcu vestibulum pretium. In sit amet commodo nunc. Aenean porttitor eu mauris ut ornare. Cras volutpat, arcu sed convallis cursus, urna eros facilisis odio, vitae molestie eros elit ac risus.</p>
-        <p>Suspendisse volutpat sapien at velit ullamcorper dictum. Integer accumsan nulla dolor, vel suscipit sem tincidunt eu. Nulla molestie metus sem, et viverra ipsum consequat eget. Vestibulum pretium eget felis cursus pellentesque. Phasellus ac magna molestie, placerat dolor at, suscipit magna. Nam imperdiet ex est, eu iaculis nisi ornare ac. Sed iaculis imperdiet ipsum eget eleifend. Cras vel felis nec elit pharetra iaculis. Quisque tempor felis vel odio consectetur, ac vulputate diam ornare. Donec pulvinar ac justo eu faucibus. Mauris a lacus at turpis lacinia fringilla at eu quam. Proin ac risus turpis. Nullam fringilla maximus bibendum. Nunc at nunc purus.</p>
-        <p>Nullam velit sem, aliquet in elit varius, blandit porttitor purus. Fusce elementum et nisi venenatis pellentesque. Integer maximus eros sodales egestas porttitor. Morbi scelerisque dolor et mi fringilla, non tempus justo commodo. Phasellus suscipit velit nec quam luctus, finibus imperdiet diam posuere. Fusce faucibus ornare erat sed auctor. Aliquam eu metus semper, suscipit nisl ac, efficitur dolor. Integer ornare neque sed justo accumsan pellentesque. Mauris a ante dictum, venenatis odio a, porttitor sapien. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean volutpat lorem at nisl molestie convallis.</p>
     </div>
 </section>
 
 <footer>
     <div class="container">
-        Stůč a nichdlo v stůtlýmru líšt dimy. Zryz žáti ďacla z štepniju hlsk. úclišký a krágra mrůtlůc i joněvy. Dřouři v mas štapa closk blýrdrac dimlá mloděžryš, o vrýplýniš udimli v tov tilke ťur třiré, šralve i těl dréni a timlůžlíti chlidý mě dě ďadom z trev, podi s dižrou nikfíšt drýb pač škodl. V úšec šátkaží ohe se a úděř sými. Zlad ovezrň naktý s lkoťzéně slivur mruš v vytr, k tidiř. Měbřáž dis žreděs blyvy tid, a úďa těd midi nibů z tě šlaký mivě a chlom greněšt, otřině modid voti. Batědlýpy nětiř běni vli boť skýho nini dláh s tkublo dědě a vafromedlos. Lá o nikut? Sluklahu.
+
     </div>
 </footer>
 
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
 </body>
 </html>

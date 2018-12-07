@@ -7,3 +7,9 @@ latte:
 
 services:
 	- CMS\Helpers\WebDir ( %projectRoot% )
+	- CMS\Forms\FormFactory
+	- App\Model\Language
+	- App\Model\Category
+	- App\Model\Product
+	- App\Model\Translator
+	- App\Model\Vat

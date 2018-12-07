@@ -1,0 +1,77 @@
+{
+  "product": {
+    "id": {
+      "type": "serial"
+    },
+    "code": {
+      "type": "string",
+      "length": 48,
+      "list": true,
+      "title": "product.code",
+      "group": "general"
+    },
+    "price": {
+      "type": "double precision",
+      "title": "product.price",
+      "list": true
+    },
+    "vat_id": {
+      "type": "integer",
+      "reference": true,
+      "group": "general",
+      "title": "product.vat"
+    },
+    "category_id": {
+      "type": "integer",
+      "reference": true,
+      "title": "product.category.main",
+      "group": "general"
+    },
+    "state": {
+      "type": "boolean",
+      "title": "product.state",
+      "list": true,
+      "group": "general"
+    }
+  },
+  "product_language": {
+    "product_id": {
+      "type": "integer",
+      "reference": true,
+      "title": "product.id",
+      "primary": true,
+      "is_nullable": false
+    },
+    "language_id": {
+      "type": "integer",
+      "reference": true,
+      "title": "language.id",
+      "primary": true,
+      "is_nullable": false
+    },
+    "title": {
+      "type": "string",
+      "length": 192,
+      "title": "product.title",
+      "list": true,
+      "group": "general"
+    },
+    "description": {
+      "type": "text",
+      "group": "general",
+      "title": "product.description"
+    },
+    "meta_keywords": {
+      "type": "string",
+      "length": 128,
+      "group": "meta",
+      "title": "meta.keywords"
+    },
+    "meta_description": {
+      "type": "string",
+      "length": 384,
+      "group": "meta",
+      "title": "meta.description"
+    }
+  }
+}

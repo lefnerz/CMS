@@ -1,0 +1,20 @@
+{block content}
+
+
+<div class="row">
+
+    {include 'submenu.latte'}
+
+    <div class="{ifset $submenu}col-md-9{else}col-md-12{/ifset}">
+        <div class="card card-primary">
+            <div n:if="false" class="card-header">
+                <h3>General </h3>
+            </div>
+            <div class="card-body">
+                {control $formName}
+            </div>
+        </div>
+    </div>
+
+</div>
+

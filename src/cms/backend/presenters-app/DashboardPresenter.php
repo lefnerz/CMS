@@ -9,7 +9,7 @@
 namespace App\BackendModule\Presenters;
 
 
-class DashboardPresenter extends \CMS\Backend\Presenters\DashboardPresenter
+final class DashboardPresenter extends \CMS\Backend\Presenters\DashboardPresenter
 {
 
 }

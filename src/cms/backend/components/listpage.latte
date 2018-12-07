@@ -1,0 +1,41 @@
+  
+  <div class="row">
+    <div class="col-12">
+        <div class="box">
+        <!-- /.box-header -->
+            <div class='box-header'>
+            <div class='p-2'>
+                <div class='box-tools pull-right'>
+                    <a class='btn btn-primary' href='{plink add}'><i class='fa fa-plus'></i> ADD</a>
+                    {*$controls*}
+                </div>
+            </div>
+            </div>
+            <div class="box-body">
+              <table id="table" class='table table-hover table-striped display' style='width: 100%'>
+                <thead>
+                <tr role="row">
+                  <th n:foreach='$heads as $code => $th'>{$th->title}</th>
+                </thead>
+                <tbody>
+                {foreach $list as $row}
+                <tr role="row" class="{if 0 == $iterator->counter%2}odd{else}even{/}" onclick='document.location = {plink $tpl $row->id}'>
+                  <td n:foreach='$heads as $code=>$th' class="sorting_{$iterator->counter}">{$row->{$code}}</td>
+                </tr>
+                {/foreach}
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th n:foreach='$heads as $code => $th'>{$th->title}</th>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+
+

@@ -1,0 +1,31 @@
+{block submenu}
+
+<div class="col-md-3" n:ifset="$submenu">
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Options</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12"></div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer bg-white p-0">
+            <ul class="nav nav-pills flex-column">
+                {dump $currentSubmenu}
+                <li n:foreach="$submenu as $key => $val" class="nav-item">
+                    <a n:href="$val['model'] (expand) $val['keys']" n:class="nav-link, isset($currentSubmenu) && $currentSubmenu == $key ? active">{ifset $val['title']}{_$val['title']}{else}{_$key}{/ifset}</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.footer -->
+    </div>
+
+</div>
+
+{/block}
